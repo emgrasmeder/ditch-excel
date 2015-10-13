@@ -8,11 +8,19 @@ Part 1: [Breaking a field containing three elements into three fields]()
 ##### Breakding a field containing three elements into three fields
 Description:
 "My data set is set up like:
-|Field 1 | Field 2 | Field 3 |
-|----------------------------|
-|X1a, X1b, X1c| Y1 | Z1|
-|X2a, X1b, X1c| Y2| Z2|
-|X3a, X3b, X3c| Y3| Z3|
-|X4a, X4b, X4c| Y4| Z4|
-|X5a, X5b, X5c| Y5| Z5|
 
+| Field 1       | Field 2       | Field 3 |
+| ------------- |:-------------:|:-------:|
+| x1a, x1b, x1c | y1            | z1      |
+| x2a, x2b, x2c | y2            | z2      |
+| x3a, x3b, x3c | y3            | z3      |
+
+Look how Field 1 has more than one piece of information in it! What I *want* it to look like is:
+
+| Field 1a      |Field 1b        |Field 1c        | Field 2       | Field 3 |
+| --------------| -------------- | -------------- |:-------------:|:-------:|
+| x1a           |  x1b           | x1c            | y1            | z1      |
+| x2a           | x2b            | x2c            | y2            | z2      |
+| x3a           | x3b            | x3c            | y3            | z3      |
+
+To do that with python, we can use the code below: 
